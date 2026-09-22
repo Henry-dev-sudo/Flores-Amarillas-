@@ -4,7 +4,7 @@ Proyecto hecho con Next.js (App Router) que muestra un ramo de girasoles animado
 
 ## 📸 Captura del sitio
 
-![Vista del jardín de girasoles](./public/captura-sitio.png)
+![Vista del jardín de girasoles](./public/cap-de-sitio.png)
 
 ## 🧩 Tecnologías usadas
 
