@@ -13,9 +13,6 @@
 # testing
 /coverage
 
-# Elimina los archivos AGENTS.md y CLAUDE.md del control de versiones
-git rm AGENTS.md CLAUDE.md
-
 # next.js
 /.next/
 /out/
@@ -42,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# archivos de instrucciones para asistentes de IA
+AGENTS.md
+CLAUDE.md
