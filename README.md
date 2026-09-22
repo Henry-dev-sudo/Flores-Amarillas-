@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌻 Flores Amarillas — Jardín de Girasoles
 
-## Getting Started
+Proyecto hecho con Next.js (App Router) que muestra un ramo de girasoles animados e interactivos, amarrados con un listón. Construido siguiendo un tutorial paso a paso, usando **CSS puro** (sin frameworks de estilos).
 
-First, run the development server:
+## 📸 Captura del sitio
+
+Guarda tu captura de pantalla dentro de `public/`, por ejemplo como `public/screenshot.png`, y luego referénciala aquí así:
+
+```md
+![Vista del jardín de girasoles](./public/captura-sitio.png)
+```
+## 🧩 Tecnologías usadas
+
+- **Next.js** (App Router) — framework de React
+- **React** — librería para construir la interfaz
+- **TypeScript** — tipado estático sobre JavaScript
+- **CSS puro** — sin Tailwind ni ninguna librería de estilos, todo en `app/globals.css`
+
+## ✅ Requisitos previos (hay que instalarlos en tu computadora, no vienen en el repo)
+
+Antes de clonar el proyecto necesitas tener instalado:
+
+1. **Node.js** (versión 18.18 o superior). Verifica con:
+   ```bash
+   node -v
+   ```
+2. **npm** (se instala junto con Node.js). Verifica con:
+   ```bash
+   npm -v
+   ```
+
+No necesitas instalar Next.js, React ni TypeScript por separado — todos esos ya están declarados en `package.json` y se instalan juntos en el siguiente paso.
+
+## 📥 Instalación
+
+Clona el repositorio y entra a la carpeta:
+
+```bash
+git clone <URL-de-tu-repositorio>
+cd flores-amarillas
+```
+
+Instala todas las dependencias del proyecto (lee `package.json` y descarga todo dentro de `node_modules/`, que **no se sube** al repositorio):
+
+```bash
+npm install
+```
+
+## ▶️ Correr el proyecto en desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚫 Qué NO hace falta instalar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Tailwind CSS** — este proyecto no lo usa, todo el diseño está en CSS puro dentro de `app/globals.css`.
+- **Librerías de íconos o UI** (como MUI, Chakra, shadcn, etc.) — no se usan, todos los elementos visuales (flores, pétalos, listón) están hechos a mano con `divs`, `SVG` y CSS.
+- **Librerías de manejo de estado** (Redux, Zustand, etc.) — el estado se maneja únicamente con el `useState` propio de React, no hace falta nada externo.
+- **Node.js global de otra versión distinta a la recomendada** — no instales varias versiones a la vez; si usas varios proyectos con distintas versiones de Node, considera usar `nvm`.
 
-## Learn More
+## 📁 Estructura del proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+flores-amarillas/
+│
+├── app/
+│   ├── components/
+│   │   ├── Flower.tsx      # Componente de un girasol individual
+│   │   └── Ribbon.tsx      # Componente del listón que amarra el ramo
+│   ├── globals.css         # Todos los estilos del proyecto
+│   ├── layout.tsx          # Estructura general de la página
+│   └── page.tsx            # Página principal (el jardín/ramo)
+│
+├── public/                 # Imágenes y archivos estáticos (incluye la captura)
+│
+├── package.json            # Lista de dependencias y scripts del proyecto
+├── tsconfig.json           # Configuración de TypeScript
+├── next.config.ts          # Configuración de Next.js
+└── README.md                # Este archivo
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📜 Scripts disponibles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Comando | Qué hace |
+|---|---|
+| `npm run dev` | Corre el proyecto en modo desarrollo (con recarga automática) |
+| `npm run build` | Genera la versión de producción, optimizada |
+| `npm run start` | Corre la versión ya construida con `npm run build` |
+| `npm run lint` | Revisa el código en busca de errores de estilo con ESLint |
