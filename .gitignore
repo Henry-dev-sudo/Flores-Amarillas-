@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# Elimina los archivos AGENTS.md y CLAUDE.md del control de versiones
+git rm AGENTS.md CLAUDE.md
+
 # next.js
 /.next/
 /out/

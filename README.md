@@ -4,11 +4,8 @@ Proyecto hecho con Next.js (App Router) que muestra un ramo de girasoles animado
 
 ## 📸 Captura del sitio
 
-Guarda tu captura de pantalla dentro de `public/`, por ejemplo como `public/screenshot.png`, y luego referénciala aquí así:
-
-```md
 ![Vista del jardín de girasoles](./public/captura-sitio.png)
-```
+
 ## 🧩 Tecnologías usadas
 
 - **Next.js** (App Router) — framework de React
